@@ -1,0 +1,27 @@
+.card {
+    color: white;
+    background-color: grey;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;    
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    padding: 25px;
+}
+
+h2 {
+    font-size: 36px;
+    color: red;
+}
+
+text {
+    color:blue;
+}
+
+.cardWords {
+    display:flex;
+}
