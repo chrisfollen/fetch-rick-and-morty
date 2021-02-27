@@ -7,34 +7,34 @@ const url = 'https://rickandmortyapi.com/api/character/?page=7'
 const putCards = data => {
     console.log(data)
     data.results.forEach(character => {
-        let el = document.createElement('div')
+        const el = document.createElement('div')
         el.className = 'card'
 
-        let imageEl = document.createElement('div')
+        const imageEl = document.createElement('div')
         imageEl.className = 'imageClass'
 
-        let wordsEl = document.createElement('div')
+        const wordsEl = document.createElement('div')
         wordsEl.className = 'cardWords'
 
-        let myImage = document.createElement('img')
+        const myImage = document.createElement('img')
         myImage.src = character.image 
         imageEl.append(myImage)
 
-        let currentName = document.createElement('h2')
-        currentName = character.name 
+        const currentName = document.createElement('h2')
+        currentName.textContent = `Name: ${character.name}` 
         wordsEl.append(currentName)
 
-        let myStatus = document.createElement('h3')
-        myStatus = character.status 
-        wordsEl.append(`Status: ${myStatus}`)
+        const myStatus = document.createElement('h3')
+        myStatus.textContent = `Status: ${character.status}` 
+        wordsEl.append(myStatus)
 
-        let myLocation = document.createElement('h3')
-        myLocation = character.location.name
-        wordsEl.append(`Last known location : ${myLocation}`)
+        const myLocation = document.createElement('h3')
+        myLocation.textContent = `Location: ${character.location.name}`
+        wordsEl.append(myLocation)
 
-        let myGender = document.createElement('h3')
-        myGender = character.gender 
-        wordsEl.append(`Gender: ${myGender}`)
+        const myGender = document.createElement('h3')
+        myGender.textContent = `Gender: ${character.gender}` 
+        wordsEl.append(myGender)
 
         el.append(imageEl, wordsEl)
         
